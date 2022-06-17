@@ -6,10 +6,11 @@ import { useRouter } from "next/router";
 
 import { FaStar } from "react-icons/fa";
 
-const ShowProduct = ({ products }) => {
+const ShowProduct = ({products}) => {
   const [update, setUpdate] = useState(1)
-  const [productsData,setProductsData] = useState(products)
+  const [productsData,setProductsData] = useState([...products])
   const imgUrl = "http://res.cloudinary.com/dvwplxhm1/image/upload/v1655461802/"
+  
   
   const deleteProduct = async (pid) => {
     const response = await fetch(
@@ -35,6 +36,8 @@ const ShowProduct = ({ products }) => {
       });
     }
   };
+  console.log(products)
+  console.log(productsData)
 
   const fetchProduct = async ()=>{
     const response = await fetch(
@@ -49,6 +52,8 @@ const ShowProduct = ({ products }) => {
     const data = await response.json();
     setProductsData(data)
   }
+
+  
 
   useEffect(() => {
     fetchProduct();
