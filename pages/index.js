@@ -1,9 +1,9 @@
-import Head from 'next/head';
+import React from 'react';
 
 import ShowProduct from './src/showProduct'
 
 export default function Home({products}) {
-  
+
   return (
   <>
     

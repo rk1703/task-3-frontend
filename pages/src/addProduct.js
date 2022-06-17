@@ -3,7 +3,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import {useDropzone} from 'react-dropzone'
 
-const addProduct = () => {
+const AddProduct = () => {
   const [image ,setImage] = useState(null)
   const onDrop = useCallback((acceptedFiles)=>{
     const url = "https://api.cloudinary.com/v1_1/dvwplxhm1/upload"
@@ -184,4 +184,4 @@ const addProduct = () => {
   );
 };
 
-export default addProduct;
+export default AddProduct;

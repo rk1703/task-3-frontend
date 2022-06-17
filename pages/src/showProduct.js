@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 import { FaStar } from "react-icons/fa";
 
-const showProduct = ({ products }) => {
+const ShowProduct = ({ products }) => {
   const [update, setUpdate] = useState(1)
   const [productsData,setProductsData] = useState(products)
   const imgUrl = "http://res.cloudinary.com/dvwplxhm1/image/upload/v1655461802/"
@@ -59,8 +59,7 @@ const showProduct = ({ products }) => {
 
   return (
     <>
-      <section className="text-gray-600 body-font">
-        {productsData.length === 0 && <div className="w-full text-4xl font-semibold text-center my-9">PLEASE ADD PRODUCTS </div>} 
+      <section className="text-gray-600 body-font"> 
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
             {productsData.map((e) => {
@@ -130,4 +129,4 @@ const showProduct = ({ products }) => {
   );
 };
 
-export default showProduct;
+export default ShowProduct;
