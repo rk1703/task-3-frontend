@@ -36,9 +36,6 @@ const ShowProduct = ({products}) => {
       });
     }
   };
-  console.log(products)
-  console.log(productsData)
-
   const fetchProduct = async ()=>{
     const response = await fetch(
       "https://task-3-backend.herokuapp.com/api/products/fetchallproducts",
